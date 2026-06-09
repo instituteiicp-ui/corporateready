@@ -1,15 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin Ambekar | IICP – Industry Integrated Career Platform</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Industry Ready | Premium Placement Ecosystem</title>
+    <!-- Google Fonts + robust system fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (CDN stable) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * {
@@ -19,421 +16,436 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            color: #2c3e50;
-            background: #f8fafc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #1e2f3e;
+            line-height: 1.55;
             scroll-behavior: smooth;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        /* custom scrollbar (visual only) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #eef2f8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f5b81b;
+            border-radius: 10px;
         }
 
         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
         }
 
-        /* Header / Navigation */
+        /* ========== HEADER ========== */
         header {
-            background: #0b1f3b;
-            color: #fff;
-            padding: 15px 0;
+            background: #0a1c2f;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(245, 184, 27, 0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 14px 28px;
         }
 
+        /* ----- LOGO : completely visible with solid colors ----- */
         .logo {
-            font-weight: 700;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
         }
-        .logo span {
-            color: #f4b41a;
+        .logo-icon {
+            font-size: 2rem;
+            color: #f5b81b;  /* solid gold */
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
         }
+        .logo-text {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 1.7rem;
+            letter-spacing: -0.02em;
+            color: #ffffff;   /* solid white -> 100% visible */
+            text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+        }
+        /* no gradient dependency – always crisp white */
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 36px;
             list-style: none;
         }
         .nav-links a {
-            color: #ddd;
+            color: #f0f4fa;
             font-weight: 500;
-            transition: color 0.3s;
             font-size: 0.95rem;
+            transition: 0.2s;
+            text-decoration: none;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
         }
         .nav-links a:hover {
-            color: #f4b41a;
+            color: #f5b81b;
+            border-bottom-color: #f5b81b;
         }
 
         .menu-toggle {
             display: none;
             font-size: 1.8rem;
             cursor: pointer;
-            color: #fff;
+            color: #f5b81b;
         }
 
-        /* Hero Section */
+        /* ========== HERO ========== */
         .hero {
-            background: linear-gradient(135deg, #0b1f3b 0%, #1e3a5f 100%);
-            color: white;
-            padding: 80px 0 70px;
-            text-align: center;
+            background: linear-gradient(125deg, #0b1e30 0%, #0f2a42 100%);
+            padding: 80px 0 90px;
             position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 300px;
-            height: 300px;
-            background: rgba(244,180,26,0.08);
-            border-radius: 50%;
         }
         .hero-content {
-            position: relative;
-            z-index: 2;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 40px;
-            max-width: 1000px;
-            margin: auto;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         .hero-img img {
-            width: 220px;
-            height: 220px;
+            width: 230px;
+            height: 230px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #f4b41a;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border: 4px solid #f5b81b;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.25);
         }
         .hero-text h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 3.3rem;
+            font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #ffffff;  /* solid white */
             line-height: 1.2;
         }
         .hero-text h1 span {
-            color: #f4b41a;
+            color: #f5b81b;
         }
-        .hero-text .subtitle {
+        .subtitle {
             font-size: 1.2rem;
-            font-weight: 300;
-            color: #cfd8e3;
-            margin-bottom: 10px;
+            color: #d6e3f0;
+            margin: 14px 0 20px;
+            font-weight: 500;
         }
-        .hero-text .tagline {
-            background: rgba(255,255,255,0.1);
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 30px;
+        .badge {
+            background: rgba(245,184,27,0.18);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 24px;
+            border-radius: 60px;
             font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            color: #f4b41a;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(245,184,27,0.5);
+            color: #ffffff;
+        }
+        .badge i {
+            color: #f5b81b;
         }
 
-        /* Section Titles */
+        /* section titles */
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 56px;
         }
         .section-title h2 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 700;
-            color: #0b1f3b;
-            margin-bottom: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #0a2a3b;
         }
         .section-title p {
-            color: #5a6c7d;
-            max-width: 600px;
-            margin: auto;
-            font-size: 1.05rem;
+            color: #496277;
+            max-width: 680px;
+            margin: 12px auto 0;
         }
         .divider {
-            width: 80px;
+            width: 70px;
             height: 4px;
-            background: #f4b41a;
-            margin: 12px auto 0;
+            background: #f5b81b;
+            margin: 20px auto 0;
             border-radius: 4px;
         }
 
-        /* About Section */
+        /* About */
         .about {
-            padding: 80px 0;
-            background: #fff;
+            padding: 90px 0;
+            background: #ffffff;
         }
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 55px;
             align-items: start;
         }
+        .about-img img {
+            border-radius: 32px;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.12);
+            width: 100%;
+        }
         .about-text h3 {
-            font-size: 1.8rem;
-            color: #0b1f3b;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0a2a3b;
+            margin-bottom: 18px;
         }
         .about-text p {
-            margin-bottom: 15px;
-            color: #445566;
+            color: #2c435c;
+            margin-bottom: 20px;
         }
-        .experience-block {
-            background: #f1f5f9;
-            padding: 20px;
-            border-left: 5px solid #f4b41a;
-            margin-bottom: 15px;
-            border-radius: 0 8px 8px 0;
+        .exp-card {
+            background: #f8fafd;
+            padding: 20px 24px;
+            border-radius: 24px;
+            border-left: 5px solid #f5b81b;
+            margin-bottom: 20px;
+            transition: 0.2s;
+            color: #1a2c3e;
         }
-        .experience-block strong {
-            color: #0b1f3b;
+        .exp-card strong {
+            color: #0b2b3f;
+            font-weight: 700;
         }
 
-        /* Services Section */
+        /* Services cards */
         .services {
-            padding: 80px 0;
-            background: #f8fafc;
+            padding: 90px 0;
+            background: #f9fbfe;
         }
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
         }
         .service-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 30px 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #eef2f6;
-            display: flex;
-            flex-direction: column;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+            border: 1px solid #eef3fa;
+            box-shadow: 0 5px 14px rgba(0,0,0,0.02);
         }
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+            transform: translateY(-6px);
+            border-color: #ffe0b0;
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
         }
         .service-icon {
-            font-size: 2.2rem;
-            color: #f4b41a;
-            margin-bottom: 15px;
+            font-size: 2.6rem;
+            color: #f5b81b;
+            margin-bottom: 20px;
         }
         .service-card h3 {
-            font-size: 1.4rem;
-            color: #0b1f3b;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .service-card ul {
-            list-style: none;
-            margin-top: auto;
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #0a2a3b;
         }
         .service-card ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f1f5f9;
-            font-size: 0.95rem;
-            color: #334455;
             display: flex;
-            align-items: flex-start;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 1px solid #ecf3f9;
+            font-size: 0.92rem;
+            color: #2e405b;
         }
         .service-card ul li i {
             color: #27ae60;
-            margin-right: 10px;
-            margin-top: 5px;
-            font-size: 0.85rem;
+            margin-top: 2px;
         }
 
-        /* Profile / Credentials */
-        .credentials {
-            background: #0b1f3b;
-            color: white;
-            padding: 50px 0;
+        /* trust strip */
+        .trust-strip {
+            background: #0e2a3f;
+            padding: 32px 0;
             text-align: center;
+            color: #ffffff;
+            font-weight: 500;
         }
-        .credentials p {
-            font-size: 1.2rem;
-            font-weight: 300;
+        .trust-strip i {
+            color: #f5b81b;
+            margin-right: 8px;
         }
 
-        /* Contact Section */
+        /* Contact */
         .contact {
-            padding: 80px 0;
-            background: #fff;
+            padding: 90px 0;
+            background: #ffffff;
         }
         .contact-flex {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
+            gap: 55px;
         }
-        .contact-info {
+        .contact-left {
             flex: 1;
         }
-        .contact-info h3 {
+        .contact-left h3 {
             font-size: 2rem;
-            color: #0b1f3b;
-            margin-bottom: 20px;
+            font-weight: 700;
+            color: #0a2a3b;
+            margin-bottom: 18px;
         }
-        .contact-info p {
-            margin-bottom: 25px;
-            color: #5a6c7d;
+        .contact-left p {
+            color: #3e5a74;
+            margin-bottom: 28px;
         }
         .contact-detail {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-size: 1.05rem;
+            gap: 16px;
+            margin-bottom: 24px;
+            color: #1e2f3e;
         }
         .contact-detail i {
-            font-size: 1.3rem;
-            color: #f4b41a;
+            width: 40px;
+            height: 40px;
+            background: #fef2df;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            color: #f5b81b;
+            font-size: 1.2rem;
         }
         .contact-form {
             flex: 1;
-            background: #f8fafc;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-        }
-        .form-group {
-            margin-bottom: 20px;
+            background: #fbfdff;
+            padding: 38px 34px;
+            border-radius: 40px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.06);
+            border: 1px solid #eef3fa;
         }
         input, textarea {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border 0.3s;
+            padding: 15px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 28px;
+            font-family: 'Inter', sans-serif;
+            background: white;
+            transition: 0.2s;
+            font-size: 0.95rem;
+            color: #1a2c3e;
         }
         input:focus, textarea:focus {
+            border-color: #f5b81b;
             outline: none;
-            border-color: #f4b41a;
-            box-shadow: 0 0 0 3px rgba(244,180,26,0.1);
+            box-shadow: 0 0 0 3px rgba(245,184,27,0.2);
         }
-        button {
-            background: #0b1f3b;
+        .btn-primary {
+            background: #0e2a3f;
             color: white;
-            padding: 14px 30px;
             border: none;
-            border-radius: 40px;
+            padding: 14px 32px;
+            border-radius: 44px;
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.25s;
         }
-        button:hover {
-            background: #1e3a5f;
-            transform: scale(1.02);
+        .btn-primary:hover {
+            background: #f5b81b;
+            color: #0a1c2f;
         }
 
-        /* Footer */
         footer {
-            background: #0b1f3b;
-            color: #ccc;
-            padding: 25px 0;
+            background: #091d2d;
+            color: #c2d6ec;
+            padding: 38px 0;
             text-align: center;
-            font-size: 0.9rem;
-        }
-        footer span {
-            color: #f4b41a;
-            font-weight: 600;
+            font-size: 0.85rem;
         }
 
-        /* Back to Top Button */
-        #backToTop {
+        /* floating widgets */
+        .floating-widget {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #f4b41a;
-            color: #0b1f3b;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
+            bottom: 100px;
+            right: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 1000;
+        }
+        .float-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
+            transition: 0.2s;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+        .float-btn:hover {
+            transform: scale(1.08);
+        }
+        .wa-float { background: #25D366; color: white; }
+        .call-float { background: #0e2a3f; color: #f5b81b; }
+
+        #backToTop {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #f5b81b;
+            color: #0a1c2f;
+            width: 46px;
+            height: 46px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
+            transition: 0.2s;
             z-index: 999;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
         #backToTop.show {
             opacity: 1;
             visibility: visible;
         }
 
-        /* Floating Action Buttons */
-        .floating-widget {
-            position: fixed;
-            bottom: 90px;  /* above the back-to-top button */
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 1000;
-        }
-        .floating-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.4rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-            transition: transform 0.2s ease, box-shadow 0.2s;
-            cursor: pointer;
-        }
-        .floating-btn:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-        }
-        .whatsapp-btn {
-            background: #25D366;
-        }
-        .call-btn {
-            background: #0b1f3b;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             .nav-links {
                 display: none;
                 flex-direction: column;
+                background: #0a1c2f;
                 position: absolute;
                 top: 70px;
                 left: 0;
-                background: #0b1f3b;
                 width: 100%;
-                padding: 20px;
-                gap: 15px;
+                padding: 28px;
+                gap: 22px;
+                border-top: 1px solid #2c4f6e;
             }
             .nav-links.active {
                 display: flex;
@@ -441,328 +453,210 @@
             .menu-toggle {
                 display: block;
             }
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
             .hero-text h1 {
                 font-size: 2.2rem;
             }
             .about-grid {
                 grid-template-columns: 1fr;
             }
-            .contact-flex {
-                flex-direction: column;
+            .container {
+                padding: 0 20px;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
             }
             .floating-widget {
-                bottom: 80px;
-                right: 20px;
+                right: 16px;
+                bottom: 90px;
             }
-            #backToTop {
-                bottom: 20px;
-                right: 20px;
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            .logo-icon {
+                font-size: 1.6rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">IICP – Industry Integrated Career Platform<span>.</span></div>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-img">
-                <img src="https://sachinambekar.netlify.app/assets/images/untitled-design-18-940x788.webp" alt="Dr. Sachin Ambekar">
-            </div>
-            <div class="hero-text">
-                <h1>Dr. <span>Sachin Ambekar</span></h1>
-                <p class="subtitle">PhD, MBA (Marketing & HRM) | 20+ Years Experience</p>
-                <p class="tagline"><i class="fas fa-rocket"></i> Founder & Lead Mentor – IICP</p>
-            </div>
+<header>
+    <nav>
+        <a href="#home" class="logo">
+            <i class="fas fa-chalkboard-user logo-icon"></i>
+            <span class="logo-text">Industry Ready</span>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
         </div>
-    </section>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Connect</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div>
-                    <img src="https://sachinambekar.netlify.app/assets/images/untitled-design-18-940x788.webp" alt="Sachin Ambekar" style="width:100%; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.1);">
-                </div>
-                <div class="about-text">
-                    <h3>Industry‑Integrated Career Expert</h3>
-                    <p>I hold an MBA in Marketing, an MBA in HRM, and a PhD in Management. My journey spans senior corporate roles, academic leadership, and successful entrepreneurship. Today I dedicate myself to bridging the gap between education and employability through <strong>IICP – Industry Integrated Career Platform</strong>.</p>
-                    <div class="experience-block">
-                        <strong><i class="fas fa-building"></i> Corporate HR & Operations (2003‑2011)</strong><br>
-                        Senior management roles in Manufacturing, Service & IT. Expertise in strategic HR, process optimization, and talent development.
-                    </div>
-                    <div class="experience-block">
-                        <strong><i class="fas fa-graduation-cap"></i> Professor & Head Corporate Relations (2011‑2017)</strong><br>
-                        Led industry-academia partnerships, placement cells, and student employability programs at a premier business school.
-                    </div>
-                    <div class="experience-block">
-                        <strong><i class="fas fa-chart-line"></i> Entrepreneur & Business Consultant (2017‑Present)</strong><br>
-                        Founded digital marketing and consulting ventures, serving IT, Food & Service industries. Creator of IICP placement ecosystem.
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-img">
+            <img src="https://sachinambekar.netlify.app/assets/images/untitled-design-18-940x788.webp" alt="Dr. Sachin Ambekar">
         </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Complete Placement Enablement Package</h2>
-                <p>Everything your institute needs to transform students into job‑ready professionals – fully white‑labelled and managed for you.</p>
-                <div class="divider"></div>
+        <div class="hero-text">
+            <h1>Dr. <span>Sachin Ambekar</span></h1>
+            <p class="subtitle">PhD, MBA (Marketing & HRM) • 20+ Years of Excellence</p>
+            <div class="badge">
+                <i class="fas fa-gem"></i> Founder & Lead Mentor – Industry Ready
             </div>
-            <div class="service-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3>1. Live Training & Mentorship</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Weekly 60‑minute live online placement readiness session for all students</li>
-                        <li><i class="fas fa-check-circle"></i> Interactive doubt‑clearing and Q&A after every session</li>
-                        <li><i class="fas fa-check-circle"></i> Scheduled mock interview workshops (one‑on‑one and panel)</li>
-                        <li><i class="fas fa-check-circle"></i> Group discussion drills on current affairs and industry topics</li>
-                        <li><i class="fas fa-check-circle"></i> Dedicated career guidance and one‑to‑one mentorship access</li>
-                        <li><i class="fas fa-check-circle"></i> Soft‑skills grooming: body language, email etiquette, phone manners</li>
-                    </ul>
-                </div>
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-bell"></i></div>
-                    <h3>2. Placement Support & Alerts</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Daily/weekly verified placement alerts posted directly to your WhatsApp group</li>
-                        <li><i class="fas fa-check-circle"></i> Direct company application links – no middlemen, no referral fees</li>
-                        <li><i class="fas fa-check-circle"></i> Step‑by‑step guidance on how to apply and follow up professionally</li>
-                        <li><i class="fas fa-check-circle"></i> Personalised placement query resolution via WhatsApp, email, and phone</li>
-                        <li><i class="fas fa-check-circle"></i> Advance notice of walk‑in drives, off‑campus events, and fresher hiring waves</li>
-                        <li><i class="fas fa-check-circle"></i> Employer‑wise preparation tips shared before key interviews</li>
-                    </ul>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>3. Student Preparation Portal (Tech Tools Suite)</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> CV & Resume Builder – pre‑designed professional templates, DOC export</li>
-                        <li><i class="fas fa-check-circle"></i> Aptitude Test App – topic‑wise and full‑length mock tests with instant scores</li>
-                        <li><i class="fas fa-check-circle"></i> Self‑Introduction Maker – script generator</li>
-                        <li><i class="fas fa-check-circle"></i> Online Case Study & Technical Problem Solver – curated scenarios with solutions</li>
-                        <li><i class="fas fa-check-circle"></i> Soft‑Skills & Interview Question Bank – 500+ HR and technical questions with model answers</li>
-                        <li><i class="fas fa-check-circle"></i> Personal Dashboard – student login</li>
-                    </ul>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fab fa-youtube"></i></div>
-                    <h3>4. Self‑Paced Video Skill Library (YouTube Classroom)</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Curated video playlists embedded directly inside your portal – no external logins</li>
-                        <li><i class="fas fa-check-circle"></i> Professional Digital Presence – step‑by‑step GitHub and LinkedIn account setup</li>
-                        <li><i class="fas fa-check-circle"></i> Technical Interview Prep – programming language Q&A, debugging walkthroughs</li>
-                        <li><i class="fas fa-check-circle"></i> Aptitude & Reasoning – shortcut tricks and solved example videos</li>
-                        <li><i class="fas fa-check-circle"></i> Resume & Cover Letter Mastery – format, keywords, and tailoring guides</li>
-                        <li><i class="fas fa-check-circle"></i> IT Core Concepts – SDLC, database basics, networking for freshers</li>
-                        <li><i class="fas fa-check-circle"></i> Available 24/7, mobile‑friendly; library updated regularly at no extra effort from institute</li>
-                    </ul>
-                </div>
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3>5. Live Projects & Certification (Equimedia Solutions)</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Real internal projects assigned from Equimedia Solutions’ own development pipeline</li>
-                        <li><i class="fas fa-check-circle"></i> Structured milestone‑based project cycle: requirements, development, review, final delivery</li>
-                        <li><i class="fas fa-check-circle"></i> Constructive feedback from an experienced industry mentor</li>
-                        <li><i class="fas fa-check-circle"></i> Verifiable Project Completion Certificate issued by a registered firm</li>
-                        <li><i class="fas fa-check-circle"></i> Online certificate verification page with QR code – eliminates fake certificates</li>
-                        <li><i class="fas fa-check-circle"></i> Option to participate in genuine external client micro‑projects for top performers</li>
-                        <li><i class="fas fa-check-circle"></i> Final project showcase featured in the weekly newsletter (opt‑in)</li>
-                    </ul>
-                </div>
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-newspaper"></i></div>
-                    <h3>6. Institute‑Branded Weekly Career Newsletter</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Professionally designed PDF, fully white‑labelled with your logo and contact</li>
-                        <li><i class="fas fa-check-circle"></i> Sections: Top Tech Headlines, Skill of the Week, Placement Alerts, Interview Tip, Student Spotlight</li>
-                        <li><i class="fas fa-check-circle"></i> Delivered every week, ready for you to forward to students and parents</li>
-                        <li><i class="fas fa-check-circle"></i> Strengthens your institute’s identity as a proactive placement readiness hub</li>
-                        <li><i class="fas fa-check-circle"></i> Zero effort from your staff – we research, design, and deliver on schedule</li>
-                        <li><i class="fas fa-check-circle"></i> One issue can be co‑branded as a “Parent Edition” for admission marketing</li>
-                    </ul>
-                </div>
-                <!-- Service 7 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-tools"></i></div>
-                    <h3>7. Institute Admin & Management Tools</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Dedicated Admin Panel – secure login with password‑protected ID generation for students</li>
-                        <li><i class="fas fa-check-circle"></i> Batch‑wise student enrollment</li>
-                        <li><i class="fas fa-check-circle"></i> Student Attendance Report</li>
-                        <li><i class="fas fa-check-circle"></i> Project/completion certificates issuance</li>
-                        <li><i class="fas fa-check-circle"></i> Monthly Placement Readiness Analytics Report</li>
-                        <li><i class="fas fa-check-circle"></i> Attendance tracking for live sessions and dashboard usage statistics</li>
-                        <li><i class="fas fa-check-circle"></i> All data exportable for your internal reviews and accreditation needs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Credentials / Trust bar -->
-    <div class="credentials">
-        <div class="container">
-            <p><i class="fas fa-award"></i> Founded & Mentored by Dr. Sachin Ambekar | 20+ Years Industry & Academic Excellence | Powered by Equimedia Solutions</p>
         </div>
     </div>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Let’s Transform Your Placement Cell</h2>
-                <p>Get a free consultation and discover how IICP can become your institute’s most powerful student magnet.</p>
-                <div class="divider"></div>
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="https://sachinambekar.netlify.app/assets/images/untitled-design-18-940x788.webp" alt="Industry Ready Mentor">
             </div>
-            <div class="contact-flex">
-                <div class="contact-info">
-                    <h3>Reach Out Directly</h3>
-                    <p>I personally respond to every query. Let’s discuss how we can tailor the placement enablement program for your students.</p>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <span>sachinambekar@outlook.com</span>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+91 9284157202</span>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Pune, Maharashtra, India</span>
-                    </div>
+            <div class="about-text">
+                <h3>Bridging the Employability Gap</h3>
+                <p>Dr. Sachin Ambekar brings dual MBA, PhD, and 20+ years of senior industry & academic leadership. He founded <strong>Industry Ready</strong> as a complete white‑labelled placement ecosystem – transforming institutes into talent powerhouses.</p>
+                <div class="exp-card">
+                    <strong><i class="fas fa-briefcase"></i> Corporate Leadership (2003‑2011)</strong><br>
+                    Senior HR & Operations roles across manufacturing, IT & services.
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="formName" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="formEmail" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="formMobile" placeholder="Mobile Number">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="formMessage" rows="4" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit"><i class="fas fa-paper-plane"></i> Send via WhatsApp</button>
-                    </form>
+                <div class="exp-card">
+                    <strong><i class="fas fa-chalkboard-user"></i> Professor & Head Corp Relations (2011‑2017)</strong><br>
+                    Led 2000+ placements, industry partnerships, employability curriculum.
+                </div>
+                <div class="exp-card">
+                    <strong><i class="fas fa-chart-line"></i> Entrepreneur & Consultant (2017–Now)</strong><br>
+                    Founder: Equimedia Solutions & Industry Ready – 25+ institutes empowered.
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 <span>IICP – Industry Integrated Career Platform</span>. All rights reserved. | Designed by Sachin Ambekar</p>
-        </div>
-    </footer>
-
-    <!-- Floating Action Buttons -->
-    <div class="floating-widget">
-        <a href="https://wa.me/919284157202?text=Hello%20Dr.%20Sachin%20Ambekar%2C%20I%20would%20like%20to%20know%20more%20about%20IICP%20services." target="_blank" class="floating-btn whatsapp-btn" title="Chat on WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+919284157202" class="floating-btn call-btn" title="Call Now">
-            <i class="fas fa-phone-alt"></i>
-        </a>
     </div>
+</section>
 
-    <!-- Back to Top Button -->
-    <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+<!-- Services Section (7 modules) -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Complete Placement Enablement Suite</h2>
+            <p>Fully white‑labelled, end‑to‑mentorship and tools – zero operational burden for your institute.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="service-grid">
+            <div class="service-card"><div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div><h3>1. Live Training & Mentorship</h3><ul><li><i class="fas fa-check-circle"></i> Weekly 60-min live placement readiness sessions</li><li><i class="fas fa-check-circle"></i> Mock interviews & panel GDs</li><li><i class="fas fa-check-circle"></i> Corporate etiquette & grooming</li><li><i class="fas fa-check-circle"></i> 1:1 career mentorship access</li></ul></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-bell"></i></div><h3>2. Placement Alerts & Support</h3><ul><li><i class="fas fa-check-circle"></i> Daily verified job alerts via institute WhatsApp group</li><li><i class="fas fa-check-circle"></i> Direct company application links (zero fee)</li><li><i class="fas fa-check-circle"></i> Walk‑in & off‑campus drive updates</li><li><i class="fas fa-check-circle"></i> Personalized query resolution</li></ul></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-laptop-code"></i></div><h3>3. Student Tech Portal</h3><ul><li><i class="fas fa-check-circle"></i> AI Resume Builder (DOC export)</li><li><i class="fas fa-check-circle"></i> Aptitude & Mock Test Simulator</li><li><i class="fas fa-check-circle"></i> Case study & problem solver</li><li><i class="fas fa-check-circle"></i> 500+ HR/Technical Q‑Bank & Self‑Intro tool</li></ul></div>
+            <div class="service-card"><div class="service-icon"><i class="fab fa-youtube"></i></div><h3>4. Video Skill Library</h3><ul><li><i class="fas fa-check-circle"></i> Curated YouTube classroom embedded</li><li><i class="fas fa-check-circle"></i> LinkedIn & GitHub optimization</li><li><i class="fas fa-check-circle"></i> Aptitude shortcuts & Tech interview prep</li><li><i class="fas fa-check-circle"></i> Accessible 24/7, monthly fresh content</li></ul></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-project-diagram"></i></div><h3>5. Live Projects & Certification</h3><ul><li><i class="fas fa-check-circle"></i> Real internal projects (Equimedia Solutions)</li><li><i class="fas fa-check-circle"></i> Milestone‑based mentorship</li><li><i class="fas fa-check-circle"></i> Verifiable QR certificate & verification page</li><li><i class="fas fa-check-circle"></i> Client micro‑projects for top performers</li></ul></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-newspaper"></i></div><h3>6. Weekly Branded Newsletter</h3><ul><li><i class="fas fa-check-circle"></i> Institute‑branded PDF (your logo)</li><li><i class="fas fa-check-circle"></i> Tech news, skill tip, placement alerts</li><li><i class="fas fa-check-circle"></i> Zero staff effort – delivered weekly</li><li><i class="fas fa-check-circle"></i> Parent edition for admission marketing</li></ul></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-tools"></i></div><h3>7. Admin Analytics Dashboard</h3><ul><li><i class="fas fa-check-circle"></i> Admin panel with batch enrollment</li><li><i class="fas fa-check-circle"></i> Attendance & progress reports</li><li><i class="fas fa-check-circle"></i> Monthly placement readiness analytics</li><li><i class="fas fa-check-circle"></i> Export data for accreditation</li></ul></div>
+        </div>
+    </div>
+</section>
 
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.getElementById('nav-links');
+<!-- Trust / credentials -->
+<div class="trust-strip">
+    <div class="container">
+        <i class="fas fa-medal"></i> Founded & personally mentored by Dr. Sachin Ambekar | 20+ years industry‑academia excellence | Powered by Equimedia Solutions
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Launch Your Placement Revolution</h2>
+            <p>Partner with Industry Ready and give your students the ultimate career advantage.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="contact-flex">
+            <div class="contact-left">
+                <h3>Let’s talk transformation</h3>
+                <p>Dr. Sachin Ambekar personally responds to every inquiry. Get a free consultation for your institute.</p>
+                <div class="contact-detail"><i class="fas fa-envelope"></i> <span>sachinambekar@outlook.com</span></div>
+                <div class="contact-detail"><i class="fas fa-phone-alt"></i> <span>+91 9284157202</span></div>
+                <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> <span>Pune, Maharashtra (India)</span></div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div style="margin-bottom: 18px;"><input type="text" id="formName" placeholder="Institute / Your Name" required></div>
+                    <div style="margin-bottom: 18px;"><input type="email" id="formEmail" placeholder="Email address" required></div>
+                    <div style="margin-bottom: 18px;"><input type="tel" id="formMobile" placeholder="WhatsApp / Mobile"></div>
+                    <div style="margin-bottom: 24px;"><textarea id="formMessage" rows="4" placeholder="Tell us about your placement goals..."></textarea></div>
+                    <button type="submit" class="btn-primary"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2025 <strong>Industry Ready</strong> — Industry Integrated Career Platform. All rights reserved. | Designed by Dr. Sachin Ambekar</p>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="floating-widget">
+    <a href="https://wa.me/919284157202?text=Hello%20Dr.%20Sachin%20Ambekar%2C%20I'm%20interested%20in%20the%20Industry%20Ready%20ecosystem%20for%20my%20institute." target="_blank" class="float-btn wa-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919284157202" class="float-btn call-float"><i class="fas fa-phone-alt"></i></a>
+</div>
+<div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+    if (menuToggle) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+    }
 
-        // Smooth scrolling for nav links
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    navLinks.classList.remove('active'); // close mobile menu
-                }
-            });
-        });
-
-        // Back to Top button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                navLinks.classList.remove('active');
             }
         });
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+    });
 
-        // Form submit: open WhatsApp with message
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+    // Back to top button
+    const backTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 550) backTop.classList.add('show');
+        else backTop.classList.remove('show');
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-            // Get values
-            const name = document.getElementById('formName').value.trim();
-            const email = document.getElementById('formEmail').value.trim();
-            const mobile = document.getElementById('formMobile').value.trim();
-            const message = document.getElementById('formMessage').value.trim();
+    // WhatsApp form handler
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('formName').value.trim();
+        const email = document.getElementById('formEmail').value.trim();
+        const mobile = document.getElementById('formMobile').value.trim();
+        const msg = document.getElementById('formMessage').value.trim();
 
-            // Build WhatsApp message
-            let waMessage = `Hello Dr. Sachin Ambekar,%0A%0A`;
-            waMessage += `Name: ${encodeURIComponent(name)}%0A`;
-            waMessage += `Email: ${encodeURIComponent(email)}%0A`;
-            if (mobile) waMessage += `Mobile: ${encodeURIComponent(mobile)}%0A`;
-            if (message) waMessage += `Message: ${encodeURIComponent(message)}%0A`;
-            waMessage += `%0AI'm interested in IICP services.`;
+        let waMsg = `Hello Dr. Sachin Ambekar,%0A%0A*Institute Inquiry*%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A`;
+        if (mobile) waMsg += `Mobile: ${encodeURIComponent(mobile)}%0A`;
+        if (msg) waMsg += `Message: ${encodeURIComponent(msg)}%0A`;
+        waMsg += `%0AI'm interested in Industry Ready premium placement services.`;
 
-            // Open WhatsApp
-            const waNumber = '919284157202';
-            const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
-            window.open(waURL, '_blank');
-
-            // Optional: reset form after short delay
-            setTimeout(() => {
-                this.reset();
-            }, 1000);
-        });
-    </script>
+        window.open(`https://wa.me/919284157202?text=${waMsg}`, '_blank');
+        setTimeout(() => form.reset(), 800);
+    });
+</script>
 </body>
 </html>
-
